@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For You ❤️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .screen {
+            display: none;
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        .first-screen {
+            padding: 60px 30px;
+        }
+
+        .first-screen h1 {
+            color: #b30059;
+            font-size: 2.2rem;
+        }
+
+        .first-screen button {
+            margin-top: 30px;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 30px;
+            background: #b30059;
+            color: white;
+            cursor: pointer;
+        }
+
+        .first-screen button:hover {
+            background: #8e0046;
+        }
+
+        .card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 25px;
+            color: #333;
+        }
+
+        .content h1 {
+            color: #b30059;
+            font-size: 2rem;
+        }
+
+        .content p {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+
+        .content button {
+            margin-top: 20px;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 25px;
+            background: #b30059;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<!-- FIRST SCREEN -->
+<div id="screen1" class="screen active">
+    <div class="first-screen">
+        <h1>Click if you are 21 ❤️</h1>
+        <button onclick="goToCard()">Click Me</button>
+    </div>
+</div>
+
+<!-- BIRTHDAY CARD -->
+<div id="screen2" class="screen card">
+    
+
+    <div class="content">
+        <h1>Happy Birthday ❤️</h1>
+
+        <p>
+            Hey baby,<br><br>
+            Happy Birthday.  
+            Today you’re the same age as me, but you’ve always been ahead of me
+            in the way you love and care.<br><br>
+            I’m grateful for your smile, your patience,
+            and the way you make my life lighter just by being in it.<br><br>
+            Let’s celebrate you properly — the way you deserve.
+        </p>
+
+        <button onclick="alert('I love you ❤️')">Tap me</button>
+
+        <div class="footer">
+            Made with love — just for you
+        </div>
+    </div>
+</div>
+
+<script>
+    function goToCard() {
+        document.getElementById("screen1").classList.remove("active");
+        document.getElementById("screen2").classList.add("active");
+    }
+</script>
+
+</body>
+</html>
